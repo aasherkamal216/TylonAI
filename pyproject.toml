@@ -1,0 +1,44 @@
+[project]
+name = "tylon"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Aasher Kamal", email = "aasherkamal786@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "astroid>=3.3.8",
+    "coverage>=7.6.12",
+    "flake8>=7.1.2",
+    "gitpython>=3.1.44",
+    "google-generativeai>=0.8.4",
+    "jinja2>=3.1.5",
+    "langchain>=0.3.20",
+    "langchain-google-genai>=2.0.10",
+    "langgraph>=0.3.5",
+    "openai>=1.65.3",
+    "psutil>=7.0.0",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+    "pytest>=8.3.5",
+    "requests>=2.32.3",
+    "rich>=13.9.4",
+    "ripgrep>=14.1.0",
+    "sphinx>=8.2.3",
+    "subprocess-run>=0.0.8",
+    "typer>=0.15.2",
+]
+
+[project.scripts]
+tylon = "tylon.main:app"
+
+[tool.setuptools.packages.find]
+where = ["tylon"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,13 @@
+# tylon/templates/fastapi_main.j2
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+{% if "sqlalchemy" in dependencies %}
+from sqlalchemy import create_engine
+engine = create_engine("sqlite:///example.db")
+{% endif %}
